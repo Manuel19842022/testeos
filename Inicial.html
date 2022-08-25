@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="./node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Pagina Inicial</title>
+    <style type="text/css">
+        .body {
+            padding: 5%;
+            margin: 3em;
+            background-color: rgb(247, 239, 239);
+        }
+        
+        .grid {
+            display: grid;
+            grid-template-columns: 50% 50%;
+            grid-template-rows: 100%;
+            background-color: rgb(247, 239, 239);
+        }
+        
+        .Fila {
+            display: grid;
+            justify-content: flex-end;
+            align-content: center;
+        }
+        
+        #TablaContenedora {
+            width: 100%;
+            height: 100%;
+            background-color: rgb(204, 209, 199);
+            border: none;
+        }
+        
+        #TablaLogin {
+            border: 1px rgb(195, 219, 174);
+            width: 400px;
+            height: 30em;
+            background-color: rgb(231, 57, 94);
+            box-shadow: 7px 3px 3px rgb(167, 162, 162);
+            border-style: solid;
+            border-radius: 5pxrgb(175, 179, 235)
+        }
+    </style>
+
+</head>
+
+<body class="body">
+
+
+    <div class="grid">
+        <div>
+
+        </div>
+        <div class="Fila">
+            <table id="TablaLogin">
+                <tr>
+                    <td>
+
+                        <form class="row g-3">
+
+                            <div class="row" style="position: relative; right: -5em; width: 300px; padding: 10px; ">
+                                <div class="row">
+                                    <label for="lblUsuario" id="Usuario" class="form-label">Usuario:</label>
+                                    <input type="text" id="validationCustom01" class="form-control is-valid" placeholder="Usuario" required>
+                                    <div class="invalid-feedback">
+                                        Por favor ingrese la fecha de baja.
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <label for="lblClave" id="Clave" class="form-label">Clave:</label>
+                                    <input type="password" id="iptClave" class="form-control is-valid" placeholder="Clave" required>
+                                </div>
+
+                                <div class="row" style="padding: 10px; margin-right: 10px; margin-left: 17px;">
+                                    <button style="width: 100px; " class=" btn btn-primary " id="reload" onclick="location.href='javascript:PaginaPrincipal()'">Agregar</button>&nbsp;
+                                    <button style="width: 100px; " class=" btn btn-danger " type="submit ">Cancelar</button>
+                                </div>
+                            </div>
+
+                        </form>
+                    </td>
+                </tr>
+            </table>
+
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        function PaginaPrincipal() {
+            window.open('./Index.html', "_self");
+
+        }
+    </script>
+</body>
+
+</html>

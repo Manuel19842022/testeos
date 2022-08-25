@@ -1,0 +1,105 @@
+<html>
+<header>
+    <title>Usuarios</title>
+</header>
+
+<body>
+
+    <form class="row g-3" text-aling="text-center">
+
+        <!--Titulo del modulo-->
+        <div style="width:100%; text-align:center;">
+            <h3>Datos de Usuario</h3>
+            <hr class="">
+        </div>
+
+        <div>
+            <div class="row" aling="center">
+                <div class="col-md-2">
+                </div>
+                <!--Fin dl titulo del modulo-->
+                <div class="col-md-3">
+                    <label for="validationCustom04" class="form-label">Organizador:</label>
+                    <select class="form-select" id="SeleccionarUno" required>
+      					<option selected disabled>Seleccione el organizador...</option>
+    				</select>
+                </div>
+
+                <div class="col-md-3">
+                    <label for="validationCustom01" class="form-label">Usuario:</label>
+                    <input type="text" class="form-control is-valid " id="validationCustom01" placeholder="Escriba el usuario..." required>
+                </div>
+
+                <div class="col-md-3">
+                    <label for="validationCustom01" class="form-label">Clave de Usuario:</label>
+                    <input type="text" class="form-control" id="validationCustom01" required>
+                    <div class="invalid-feedback">
+                        Por favor ingrese el usuario.
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-2">
+                </div>
+                <div class="col-md-3">
+                    <label for="validationCustom01" class="form-label">Fecha de alta:</label>
+                    <input type="date" class="form-control" id="validationCustom01" required>
+                    <div class="invalid-feedback">
+                        Por favor ingrese la fecha de alta.
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <label for="validationCustom04" class="form-label">Estado:</label>
+                    <select class="form-select" id="validationCustom04" required>
+      					<option selected disabled value="">Seleccione el estado...</option>
+      					<option>Activo</option>
+      					<option>Inactivo</option>
+      					<option>Suspendido</option>
+    				</select>
+
+                    <div class="invalid-feedback">
+                        Por favor ingrese el estado..
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <label for="validationCustom01" class="form-label">Fecha de Suspensión:</label>
+                    <input type="date" class="form-control" id="validationCustom01" required>
+                    <div class="invalid-feedback">
+                        Por favor ingrese la fecha de baja.
+                    </div>
+                </div>
+
+                <DIV style="display:grid; width:100%; padding:5px;">
+                    <div style="display: grid; grid-template-rows:50x; grid-template-columns: auto auto auto auto auto auto	; ">
+                    	
+                        <div class="col">
+                        </div>
+                        <div class="col">
+                        </div>
+                        <div class="col">
+                        </div>
+                        <div class="col">
+                            <button style="width: 200px; vertical-align: center; " class="btn btn-primary " type="submit ">Guardar</button>
+                            <button style="width: 200px; " class="btn btn-danger " type="submit ">Cancelar</button>
+                        </div>
+                        <div class="col">
+                        </div>
+                        <div class="col">
+                        </div>
+         
+                    </div>
+                </DIV>
+            </div>
+        </div>
+    </form>
+
+    <script type="text/javascript ">
+        InicializarSelect();
+    </script>
+
+</body>
+
+</html>

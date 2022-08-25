@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Registro de Participantes</title>
+    <script type="text/javascript">
+    	 var counterVal = 1;
+    	 function agregarElementoTabla() {
+
+            let Elemento = "";
+
+            Elemento = Elemento + '<tr>';
+            Elemento = Elemento + '<td>';
+            Elemento = Elemento + '';
+
+            Elemento = Elemento + '<div class="row row-cols-6">';
+
+            Elemento = Elemento + '<div class="col-md-1">';
+            Elemento = Elemento + '<label for="No" class="form-label" id="ContadorRegistros'+counterVal.toString().trim()+'">Reg.: '+counterVal.toString().trim()+'</label>';
+            Elemento = Elemento + '</div>';
+
+            Elemento = Elemento + '<div class="col-md-2">';
+            Elemento = Elemento + '<label for="nombre" class="form-label">Nombre</label>';
+            Elemento = Elemento + '<input type="text" class="form-control is-valid" id="nombre'+counterVal.toString().trim()+'" placeholder="Escribe el nombre" required>';
+            Elemento = Elemento + '</div>';
+
+
+            Elemento = Elemento + '<div class="col-md-2">';
+            Elemento = Elemento + '<label for="Papellido " class="form-label ">Primer Apellido</label>';
+            Elemento = Elemento + '<input type="text " class="form-control is-valid " id="Papellido'+counterVal.toString().trim()+'" placeholder="Primer apellido " required>';
+            Elemento = Elemento + '</div>';
+
+            Elemento = Elemento + '<div class="col-md-2">';
+            Elemento = Elemento + '<label for="Papellido " class="form-label ">Segundo Apellido</label>';
+            Elemento = Elemento + '<input type="text " class="form-control is-valid " id="mapellido'+counterVal.toString().trim()+'" aria-describedby="inputGroupPrepend3';
+            Elemento = Elemento + 'validationServerUsernameFeedback " placeholder="Segundo apellido " required>';
+            Elemento = Elemento + '</div>';
+
+            Elemento = Elemento + '<div class="col-md-4">';
+            Elemento = Elemento + '<label for="Direccion " class="form-label ">Dirección</label>';
+            Elemento = Elemento + '<input type="text" class="form-control is-valid " id="Direccion'+counterVal.toString().trim()+'" rows="2 " placeholder="Escriba la dirección "';
+            Elemento = Elemento + ' aria-describedby="validationServer03Feedback ">';
+            Elemento = Elemento + ' </div>';
+
+            Elemento = Elemento + '<div class="col-md-2">';
+            Elemento = Elemento + '<label for="validationServer03" class="form-label ">Correo</label>';
+            Elemento = Elemento + '<input type="email " class="form-control is-valid " id="validationServer03'+counterVal.toString().trim()+'" placeholder="Ejemplo@dominio.com" ';
+            Elemento = Elemento + 'aria-describedby="validationServer03Feedback " required>';
+            Elemento = Elemento + '</div>';
+            Elemento = Elemento + '</div>';
+            Elemento = Elemento + '</td>';
+            Elemento = Elemento + '</tr>';
+           
+            document.getElementById("TablaUno").insertRow(-1).innerHTML = Elemento;
+            incrementClick();
+
+        }
+
+         function incrementClick() {
+            ++counterVal;
+        }
+
+       agregarElementoTabla(); 
+
+    </script>
+</head>
+
+<body>
+
+
+
+    <!--Titulo de la pagina-->
+    <div style="width:100%; text-align:center;">
+        <h3>Registro de Participantes
+            <h3>
+                <hr class="">
+    </div>
+
+    <div class="margenes" style="height: 100%; text-align:CENTER; ">
+
+        <form class="row g-3">
+            <table>
+                <tr>
+                    <td>
+                        <div class="row">
+                            <div class="col-md-3">
+                            	<label for="No" class="form-label" id="NombreOrg">Nombre:</label>
+                                <input type="text" class="form-control is-valid" id="Organizador" placeholder="Organizador" required>
+                            </div>
+                            <div class="col-md-3">
+                                <a class="navbar-brand" href="#"><img src="./Imagenes/seleccionar.jpg" alt="Seleccionar" width="60" height="48"></a>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+
+            <table id="TablaUno" style="width:100%; background: rgb(236, 236, 236); border-radius: 5px; border: 1;">
+            </table>
+
+            <div class=" col-12 ">
+                <button style="width: 200px; " class=" btn btn-primary " type=" submit ">Guardar</button>
+                <button style="width: 200px; " class=" btn btn-primary " type=" submit " onclick="agregarElementoTabla()">Otro Participante</button>
+                <button style="width: 200px; " class=" btn btn-danger " type="reset" onclick="location.reload()">Cancelar</button>
+            </div>
+
+        </form>
+
+    </div>
+</body>
+
+</html>

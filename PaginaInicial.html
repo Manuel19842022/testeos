@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+
+    <link href="./node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <title>Pagina de Inicio</title>
+
+    <!--Agregando estilos-->
+    <style type="text/css">
+        #TablaContenedora {
+            width: 100%;
+            height: 100%;
+   
+            background-color: rgb(204, 209, 199);
+        }
+        
+        #TablaLogin {
+            border: 1px rgb(195, 219, 174);
+            width: 400px;
+            height: 30em;
+            background-color: rgb(195, 219, 174);
+            box-shadow: 7px 3px 3px rgb(167, 162, 162);
+            border-style: solid;
+            border-radius: 5px;
+        }
+    </style>
+
+</head>
+
+
+
+<body>
+
+    <table id="TablaContenedora">
+        <tr>
+            <td>
+
+            </td>
+            <td align="center" style=" position: absolute; right: 200px; width: 300px; padding: 10px;">
+                <table id="TablaLogin">
+
+                    <tr>
+                        <td  >
+
+                            <form class="row g-3">
+
+                                <div class="row" style="position: relative; right: -5em; width: 300px; padding: 10px; ">
+                                    <div class="row">
+                                        <label for="lblUsuario" id="Usuario" class="form-label">Usuario:</label>
+                                        <input type="text" id="validationCustom01" class="form-control is-valid" placeholder="Usuario" required>
+                                        <div class="invalid-feedback">
+                                            Por favor ingrese la fecha de baja.
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <label for="lblClave" id="Clave" class="form-label">Clave:</label>
+                                        <input type="password" id="iptClave" class="form-control is-valid" placeholder="Clave" required>
+                                    </div>
+
+                                    <div class="row" style="padding: 10px; margin-right: 10px; margin-left: 17px;">
+                                        <button style="width: 100px; " class=" btn btn-primary " type=" submit ">Agregar</button>&nbsp;
+                                        <button style="width: 100px; " class=" btn btn-danger " type="submit ">Cancelar</button>
+                                    </div>
+                                </div>
+
+                            </form>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,154 @@
+<html>
+<header>
+    <meta charset=UTF-8>
+    <!--
+    <link href="./bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">-->
+
+    <link href="./node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./node_modules/bootstrap/dist/css/Css.css" rel="stylesheet">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="http://code.jquery.com/jquery.js"></script>
+    
+    <script>
+
+        $(document).ready(function() {
+
+            $("#LoadPagina").load("./Objetos/PaginaVacia.html");
+        });
+
+
+        $(document).ready(function() {
+
+            $("#Organizadores").click(function() {
+
+                $("#LoadPagina").load("./Objetos/Organizadores.html");
+
+            });
+
+            $("#Usuarios").click(function() {
+
+                $("#LoadPagina").load("./Objetos/Usuarios.html");
+
+            });
+
+            $("#CrearTanda").click(function() {
+                $("#LoadPagina").load("./Objetos/CrearTanda.html");
+
+            });
+
+            $("#IniciarTanda").click(function() {
+                $("#LoadPagina").load("./IniciarTanda.html");
+
+            });
+
+        });
+
+
+    </script>
+<script type="text/javascript" src="./Funciones/Funciones.js">
+        InicializarSelect("SeleccionarUno");
+    </script>
+</header>
+
+<body">
+
+
+    <div class="container">
+
+
+        <div class="row">
+            <nav class="navbar navbar-expand-lg bg-light">
+                <a class="navbar-brand" href="#"><img src="./Imagenes/Calculadora.png" alt="Alcancia" width="60" height="48"></a>
+
+                <div class="btn-group" role="group">
+                    <button type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                            Catalogos
+                        </button>
+
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a id="Usuarios" class="dropdown-item" href="#">Usuarios</a>
+                        </li>
+
+                        <li>
+                            <a id="Organizadores" class="dropdown-item" href="#">Organizadores</a>
+                        </li>
+
+                        <li class="dropdown-submenu">
+                            <a class="dropdown-item" href="#"> Tandas</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" id="CrearTanda" href="#">Crear</a></li>
+                                <li><a class="dropdown-item" id="IniciarTanda" href="#">Iniciar</a></li>
+                            </ul>
+                        </li>
+
+
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="#">Ayuda</a></li>
+                    </ul>
+
+                </div>
+
+                <p>&nbsp</p>
+
+                <div class="btn-group">
+                    <button type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                            Reportes
+                        </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Reporte de Usuarios</a></li>
+                        <li>
+                            <a class="dropdown-item" href="#"></a>
+                        </li>
+                        <li><a class="dropdown-item" href="#">Reporte de Tandas</a></li>
+                        <li><a class="dropdown-item" href="#">Reportes de Organizadores</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="#">Ayuda</a></li>
+                    </ul>
+                </div>
+
+                <p>&nbsp</p>
+
+
+                <div class="btn-group">
+                    <button type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                            Iniciar
+                        </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Iniciar Tanda</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="#">Ayuda</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+
+        <div class="row">
+
+            <p>&nbsp&nbsp</p>
+            <DIV id="LoadPagina">
+            </DIV>
+            <p>&nbsp &nbsp</p>
+        </div>
+
+        <div class="row">
+            <nav class="navbar navbar-expand-lg bg-light">
+                <div class="container-fluid">
+                    <footer>Navbar </footer>
+                </div>
+            </nav>
+        </div>
+
+    </div>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js">
+    </script>
+</body>
+
+</html>

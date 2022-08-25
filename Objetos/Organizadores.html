@@ -1,0 +1,105 @@
+<html>
+<header>
+    <title>
+        Organizador
+    </title>
+    <script type="text/javascript" src="./Funciones/Funciones.js">
+    </script>
+</header>
+
+<body>
+
+
+
+    <form class="row g-3 needs-validation" novalidate>
+        <div align="center">
+        <h3>Datos del Organizador</h3>
+        </div>
+        <hr class="">
+        <div class="row">
+            <div class="col-md-4 ">
+
+                <label for="validationCustom03" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="validationCustom03" placeholder="Escribe el nombre" aria-describedby="inputGroupPrepend" required>
+                <div class="invalid-feedback">
+                    Ingrese el nombre.
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <label for="Papellido " class="form-label ">Primer Apellido</label>
+                <input type="text " class="form-control is-valid " id="PrimerApellido" placeholder="Primer apellido" required>
+            </div>
+
+            <div class="col-md-4">
+                <label for="Papellido " class="form-label ">Segundo Apellido</label>
+                <input type="text " class="form-control is-valid " id="Sapellido" aria-describedby="inputGroupPrepend3 validationServerUsernameFeedback " placeholder="Segundo apellido " required>
+            </div>
+        </div>
+
+        <div class="row ">
+            <label for="Direccion " class="form-label ">Dirección</label>
+            <textarea class="form-control is-valid " id="Direccion" rows="2 " placeholder="Escriba la dirección " aria-describedby="validationServer03Feedback "></textarea>
+        </div>
+
+        <div class="row ">
+            <label for="validationServer03 " class="form-label ">Correo</label>
+            <input type="email " class="form-control is-valid " id="Correo" placeholder="Ejemplo@dominio.com " aria-describedby="validationServer03Feedback " required>
+        </div>
+
+
+        <DIV style="display:grid; width:100%; padding:5px;">
+                    <div style="display: grid; grid-template-rows:50x; grid-template-columns: auto auto auto auto auto auto ; ">
+                        
+                        <div class="col">
+                        </div>
+                        <div class="col">
+                        </div>
+                        <div class="col">
+                        </div>
+                        <div class="col">
+                            <button style="width: 200px; " class="btn btn-primary"  data-bs-target="#staticBackdrop" onclick="ObtieneInformacionCajasTexto()" type="submit">Agregar</button>
+            <button style="width: 200px; " class="btn btn-danger" type="submit" onclick="console.log(registrar())">Cancelar</button>
+                        </div>
+                        <div class="col">
+                        </div>
+                        <div class="col">
+                        </div>
+         
+                    </div>
+                </DIV>
+
+
+
+
+
+    </form>
+
+    <!-- Modal -->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Mensaje del Sistema</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="MiMensaje" onclick="LimpiaMensaje()">
+
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Aceptar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        function LimpiaMensaje() {
+           document.getElementById('MiMensaje').innerHTML ="";
+        }
+    </script>
+
+</body>
+
+</html>
